@@ -5,7 +5,8 @@ Consumidor (INPC) publicado por el INEGI. Descarga series mensuales por entidad
 federativa y ciudad, y las consolida en un único archivo CSV.
 
 La configuración incluida contiene el índice general y ocho divisiones por
-objeto del gasto para las 32 entidades y las 55 ciudades del catálogo.
+objeto del gasto para el nivel nacional, las 32 entidades y las 55 ciudades del
+catálogo: 792 series geográficas en total.
 
 ## Requisitos
 
