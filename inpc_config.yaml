@@ -1,0 +1,1178 @@
+# ===============================
+# Configuración general INPC
+# ===============================
+
+inegi:
+  endpoint: "https://www.inegi.org.mx/app/indicesdepreciosv2/Exportacion.aspx?INPtipoExporta=XLS"
+  content_type: "application/x-www-form-urlencoded"
+  tipo_exporta: "XLS"
+  formato: "XLS"
+  tipo: "Niveles"
+  info: "Índices"
+  orientacion: "vertical"
+  esquema: 0
+  st: "pf"
+  inp: "cuadro"
+  meta: 1
+
+# ===============================
+# Periodo de consulta
+# ===============================
+
+periodo:
+  anio_inicio: 2018
+  anio_fin: 2026
+
+# ===============================
+# Salida
+# ===============================
+
+output:
+  carpeta_temporal: "tmp_inpc"
+  nombre_archivo: "{entidad}.xls"
+  archivo_consolidado: "inpc_integrado.csv"
+
+
+# ===============================
+# Catálogo de entidades
+# serie: INPC general por entidad
+# ===============================
+
+nacional:
+  nacional:
+    idEstructura: "112001700030"
+    indices:
+      indice_general: "865586"
+
+estados:
+  aguascalientes:
+    idEstructura: "1120017000700010"
+    indices:
+      indice_general: "894950"
+      alimentos: "894951"
+      ropa: "895106"
+      vivienda: "895158"
+      muebles: "895183"
+      salud: "895238"
+      transporte: "895288"
+      educacion: "895324"
+      otros: "895369"
+
+  baja_california:
+    idEstructura: "1120017000700020"
+    indices:
+      indice_general: "895380"
+      alimentos: "895381"
+      ropa: "895536"
+      vivienda: "895588"
+      muebles: "895613"
+      salud: "895668"
+      transporte: "895718"
+      educacion: "895754"
+      otros: "895799"
+
+  baja_california_sur:
+    idEstructura: "1120017000700030"
+    indices:
+      indice_general: "895810"
+      alimentos: "895811"
+      ropa: "895966"
+      vivienda: "896018"
+      muebles: "896043"
+      salud: "896098"
+      transporte: "896148"
+      educacion: "896184"
+      otros: "896229"
+
+  campeche:
+    idEstructura: "1120017000700040"
+    indices:
+      indice_general: "896240"
+      alimentos: "896241"
+      ropa: "896396"
+      vivienda: "896448"
+      muebles: "896473"
+      salud: "896528"
+      transporte: "896578"
+      educacion: "896614"
+      otros: "896659"
+
+  coahuila:
+    idEstructura: "1120017000700050"
+    indices:
+      indice_general: "896670"
+      alimentos: "896671"
+      ropa: "896826"
+      vivienda: "896878"
+      muebles: "896903"
+      salud: "896958"
+      transporte: "897008"
+      educacion: "897044"
+      otros: "897089"
+
+  colima:
+    idEstructura: "1120017000700060"
+    indices:
+      indice_general: "897100"
+      alimentos: "897101"
+      ropa: "897256"
+      vivienda: "897308"
+      muebles: "897333"
+      salud: "897388"
+      transporte: "897438"
+      educacion: "897474"
+      otros: "897519"
+
+  chiapas:
+    idEstructura: "1120017000700070"
+    indices:
+      indice_general: "897530"
+      alimentos: "897531"
+      ropa: "897686"
+      vivienda: "897738"
+      muebles: "897763"
+      salud: "897818"
+      transporte: "897868"
+      educacion: "897904"
+      otros: "897949"
+
+  chihuahua:
+    idEstructura: "1120017000700080"
+    indices:
+      indice_general: "897960"
+      alimentos: "897961"
+      ropa: "898116"
+      vivienda: "898168"
+      muebles: "898193"
+      salud: "898248"
+      transporte: "898298"
+      educacion: "898334"
+      otros: "898379"
+
+  cdmx:
+    idEstructura: "1120017000700090"
+    indices:
+      indice_general: "898390"
+      alimentos: "898391"
+      ropa: "898546"
+      vivienda: "898598"
+      muebles: "898623"
+      salud: "898678"
+      transporte: "898728"
+      educacion: "898764"
+      otros: "898809"
+
+  durango:
+    idEstructura: "1120017000700100"
+    indices:
+      indice_general: "898820"
+      alimentos: "898821"
+      ropa: "898976"
+      vivienda: "899028"
+      muebles: "899053"
+      salud: "899108"
+      transporte: "899158"
+      educacion: "899194"
+      otros: "899239"
+
+  guanajuato:
+    idEstructura: "1120017000700110"
+    indices:
+      indice_general: "899250"
+      alimentos: "899251"
+      ropa: "899406"
+      vivienda: "899458"
+      muebles: "899483"
+      salud: "899538"
+      transporte: "899588"
+      educacion: "899624"
+      otros: "899669"
+
+  guerrero:
+    idEstructura: "1120017000700120"
+    indices:
+      indice_general: "899680"
+      alimentos: "899681"
+      ropa: "899836"
+      vivienda: "899888"
+      muebles: "899913"
+      salud: "899968"
+      transporte: "900018"
+      educacion: "900054"
+      otros: "900099"
+
+  hidalgo:
+    idEstructura: "1120017000700130"
+    indices:
+      indice_general: "900110"
+      alimentos: "900111"
+      ropa: "900266"
+      vivienda: "900318"
+      muebles: "900343"
+      salud: "900398"
+      transporte: "900448"
+      educacion: "900484"
+      otros: "900529"
+
+  jalisco:
+    idEstructura: "1120017000700140"
+    indices:
+      indice_general: "900540"
+      alimentos: "900541"
+      ropa: "900696"
+      vivienda: "900748"
+      muebles: "900773"
+      salud: "900828"
+      transporte: "900878"
+      educacion: "900914"
+      otros: "900959"
+
+  estado_mexico:
+    idEstructura: "1120017000700150"
+    indices:
+      indice_general: "900970"
+      alimentos: "900971"
+      ropa: "901126"
+      vivienda: "901178"
+      muebles: "901203"
+      salud: "901258"
+      transporte: "901308"
+      educacion: "901344"
+      otros: "901389"
+
+  michoacan:
+    idEstructura: "1120017000700160"
+    indices:
+      indice_general: "901400"
+      alimentos: "901401"
+      ropa: "901556"
+      vivienda: "901608"
+      muebles: "901633"
+      salud: "901688"
+      transporte: "901738"
+      educacion: "901774"
+      otros: "901819"
+
+  morelos:
+    idEstructura: "1120017000700170"
+    indices:
+      indice_general: "901830"
+      alimentos: "901831"
+      ropa: "901986"
+      vivienda: "902038"
+      muebles: "902063"
+      salud: "902118"
+      transporte: "902168"
+      educacion: "902204"
+      otros: "902249"
+
+  nayarit:
+    idEstructura: "1120017000700180"
+    indices:
+      indice_general: "902260"
+      alimentos: "902261"
+      ropa: "902416"
+      vivienda: "902468"
+      muebles: "902493"
+      salud: "902548"
+      transporte: "902598"
+      educacion: "902634"
+      otros: "902679"
+
+  nuevo_leon:
+    idEstructura: "1120017000700190"
+    indices:
+      indice_general: "902690"
+      alimentos: "902691"
+      ropa: "902846"
+      vivienda: "902898"
+      muebles: "902923"
+      salud: "902978"
+      transporte: "903028"
+      educacion: "903064"
+      otros: "903109"
+
+  oaxaca:
+    idEstructura: "1120017000700200"
+    indices:
+      indice_general: "903120"
+      alimentos: "903121"
+      ropa: "903276"
+      vivienda: "903328"
+      muebles: "903353"
+      salud: "903408"
+      transporte: "903458"
+      educacion: "903494"
+      otros: "903539"
+
+  puebla:
+    idEstructura: "1120017000700210"
+    indices:
+      indice_general: "903550"
+      alimentos: "903551"
+      ropa: "903706"
+      vivienda: "903758"
+      muebles: "903783"
+      salud: "903838"
+      transporte: "903888"
+      educacion: "903924"
+      otros: "903969"
+
+  queretaro:
+    idEstructura: "1120017000700220"
+    indices:
+      indice_general: "903980"
+      alimentos: "903981"
+      ropa: "904136"
+      vivienda: "904188"
+      muebles: "904213"
+      salud: "904268"
+      transporte: "904318"
+      educacion: "904354"
+      otros: "904399"
+
+  quintana_roo:
+    idEstructura: "1120017000700230"
+    indices:
+      indice_general: "904410"
+      alimentos: "904411"
+      ropa: "904566"
+      vivienda: "904618"
+      muebles: "904643"
+      salud: "904698"
+      transporte: "904748"
+      educacion: "904784"
+      otros: "904829"
+
+  san_luis_potosi:
+    idEstructura: "1120017000700240"
+    indices:
+      indice_general: "904840"
+      alimentos: "904841"
+      ropa: "904996"
+      vivienda: "905048"
+      muebles: "905073"
+      salud: "905128"
+      transporte: "905178"
+      educacion: "905214"
+      otros: "905259"
+
+  sinaloa:
+    idEstructura: "1120017000700250"
+    indices:
+      indice_general: "905270"
+      alimentos: "905271"
+      ropa: "905426"
+      vivienda: "905478"
+      muebles: "905503"
+      salud: "905558"
+      transporte: "905608"
+      educacion: "905644"
+      otros: "905689"
+
+  sonora:
+    idEstructura: "1120017000700260"
+    indices:
+      indice_general: "905700"
+      alimentos: "905701"
+      ropa: "905856"
+      vivienda: "905908"
+      muebles: "905933"
+      salud: "905988"
+      transporte: "906038"
+      educacion: "906074"
+      otros: "906119"
+
+  tabasco:
+    idEstructura: "1120017000700270"
+    indices:
+      indice_general: "906130"
+      alimentos: "906131"
+      ropa: "906286"
+      vivienda: "906338"
+      muebles: "906363"
+      salud: "906418"
+      transporte: "906468"
+      educacion: "906504"
+      otros: "906549"
+
+  tamaulipas:
+    idEstructura: "1120017000700280"
+    indices:
+      indice_general: "906560"
+      alimentos: "906561"
+      ropa: "906716"
+      vivienda: "906768"
+      muebles: "906793"
+      salud: "906848"
+      transporte: "906898"
+      educacion: "906934"
+      otros: "906979"
+
+  tlaxcala:
+    idEstructura: "1120017000700290"
+    indices:
+      indice_general: "906990"
+      alimentos: "906991"
+      ropa: "907146"
+      vivienda: "907198"
+      muebles: "907223"
+      salud: "907278"
+      transporte: "907328"
+      educacion: "907364"
+      otros: "907409"
+
+  veracruz:
+    idEstructura: "1120017000700300"
+    indices:
+      indice_general: "907420"
+      alimentos: "907421"
+      ropa: "907576"
+      vivienda: "907628"
+      muebles: "907653"
+      salud: "907708"
+      transporte: "907758"
+      educacion: "907794"
+      otros: "907839"
+
+  yucatan:
+    idEstructura: "1120017000700310"
+    indices:
+      indice_general: "907850"
+      alimentos: "907851"
+      ropa: "908006"
+      vivienda: "908058"
+      muebles: "908083"
+      salud: "908138"
+      transporte: "908188"
+      educacion: "908224"
+      otros: "908269"
+
+  zacatecas:
+    idEstructura: "1120017000700320"
+    indices:
+      indice_general: "908280"
+      alimentos: "908281"
+      ropa: "908436"
+      vivienda: "908488"
+      muebles: "908513"
+      salud: "908568"
+      transporte: "908618"
+      educacion: "908654"
+      otros: "908699"
+
+ciudades:
+  area_metropolitana_cdmx:
+    idEstructura: "1120017000600010"
+    indices:
+      indice_general: "870982"
+      alimentos: "870983"
+      ropa: "871138"
+      vivienda: "871190"
+      muebles: "871215"
+      salud: "871270"
+      transporte: "871320"
+      educacion: "871356"
+      otros: "871401"
+
+  acapulco_gro:
+    idEstructura: "1120017000600020"
+    indices:
+      indice_general: "871518"
+      alimentos: "871519"
+      ropa: "871674"
+      vivienda: "871726"
+      muebles: "871751"
+      salud: "871806"
+      transporte: "871856"
+      educacion: "871892"
+      otros: "871937"
+
+  aguascalientes_ags:
+    idEstructura: "1120017000600030"
+    indices:
+      indice_general: "871948"
+      alimentos: "871949"
+      ropa: "872104"
+      vivienda: "872156"
+      muebles: "872181"
+      salud: "872236"
+      transporte: "872286"
+      educacion: "872322"
+      otros: "872367"
+
+  atlacomulco_mex:
+    idEstructura: "1120017000600040"
+    indices:
+      indice_general: "872378"
+      alimentos: "872379"
+      ropa: "872534"
+      vivienda: "872586"
+      muebles: "872611"
+      salud: "872666"
+      transporte: "872716"
+      educacion: "872752"
+      otros: "872797"
+
+  campeche_camp:
+    idEstructura: "1120017000600050"
+    indices:
+      indice_general: "872808"
+      alimentos: "872809"
+      ropa: "872964"
+      vivienda: "873016"
+      muebles: "873041"
+      salud: "873096"
+      transporte: "873146"
+      educacion: "873182"
+      otros: "873227"
+
+  cancun_qroo:
+    idEstructura: "1120017000600060"
+    indices:
+      indice_general: "873238"
+      alimentos: "873239"
+      ropa: "873394"
+      vivienda: "873446"
+      muebles: "873471"
+      salud: "873526"
+      transporte: "873576"
+      educacion: "873612"
+      otros: "873657"
+
+  cd_acuna_coah:
+    idEstructura: "1120017000600070"
+    indices:
+      indice_general: "873668"
+      alimentos: "873669"
+      ropa: "873824"
+      vivienda: "873876"
+      muebles: "873901"
+      salud: "873956"
+      transporte: "874006"
+      educacion: "874042"
+      otros: "874087"
+
+  cd_jimenez_chih:
+    idEstructura: "1120017000600080"
+    indices:
+      indice_general: "874098"
+      alimentos: "874099"
+      ropa: "874254"
+      vivienda: "874306"
+      muebles: "874331"
+      salud: "874386"
+      transporte: "874436"
+      educacion: "874472"
+      otros: "874517"
+
+  cd_juarez_chih:
+    idEstructura: "1120017000600090"
+    indices:
+      indice_general: "874528"
+      alimentos: "874529"
+      ropa: "874684"
+      vivienda: "874736"
+      muebles: "874761"
+      salud: "874816"
+      transporte: "874866"
+      educacion: "874902"
+      otros: "874947"
+
+  chetumal_qroo:
+    idEstructura: "1120017000600100"
+    indices:
+      indice_general: "874958"
+      alimentos: "874959"
+      ropa: "875114"
+      vivienda: "875166"
+      muebles: "875191"
+      salud: "875246"
+      transporte: "875296"
+      educacion: "875332"
+      otros: "875377"
+
+  chihuahua_chih:
+    idEstructura: "1120017000600110"
+    indices:
+      indice_general: "875388"
+      alimentos: "875389"
+      ropa: "875544"
+      vivienda: "875596"
+      muebles: "875621"
+      salud: "875676"
+      transporte: "875726"
+      educacion: "875762"
+      otros: "875807"
+
+  coatzacoalcos_ver:
+    idEstructura: "1120017000600120"
+    indices:
+      indice_general: "875818"
+      alimentos: "875819"
+      ropa: "875974"
+      vivienda: "876026"
+      muebles: "876051"
+      salud: "876106"
+      transporte: "876156"
+      educacion: "876192"
+      otros: "876237"
+
+  colima_col:
+    idEstructura: "1120017000600130"
+    indices:
+      indice_general: "876248"
+      alimentos: "876249"
+      ropa: "876404"
+      vivienda: "876456"
+      muebles: "876481"
+      salud: "876536"
+      transporte: "876586"
+      educacion: "876622"
+      otros: "876667"
+
+  cordoba_ver:
+    idEstructura: "1120017000600140"
+    indices:
+      indice_general: "876678"
+      alimentos: "876679"
+      ropa: "876834"
+      vivienda: "876886"
+      muebles: "876911"
+      salud: "876966"
+      transporte: "877016"
+      educacion: "877052"
+      otros: "877097"
+
+  cortazar_gto:
+    idEstructura: "1120017000600150"
+    indices:
+      indice_general: "877108"
+      alimentos: "877109"
+      ropa: "877264"
+      vivienda: "877316"
+      muebles: "877341"
+      salud: "877396"
+      transporte: "877446"
+      educacion: "877482"
+      otros: "877527"
+
+  cuernavaca_mor:
+    idEstructura: "1120017000600160"
+    indices:
+      indice_general: "877538"
+      alimentos: "877539"
+      ropa: "877694"
+      vivienda: "877746"
+      muebles: "877771"
+      salud: "877826"
+      transporte: "877876"
+      educacion: "877912"
+      otros: "877957"
+
+  culiacan_sin:
+    idEstructura: "1120017000600170"
+    indices:
+      indice_general: "877968"
+      alimentos: "877969"
+      ropa: "878124"
+      vivienda: "878176"
+      muebles: "878201"
+      salud: "878256"
+      transporte: "878306"
+      educacion: "878342"
+      otros: "878387"
+
+  durango_dgo:
+    idEstructura: "1120017000600180"
+    indices:
+      indice_general: "878398"
+      alimentos: "878399"
+      ropa: "878554"
+      vivienda: "878606"
+      muebles: "878631"
+      salud: "878686"
+      transporte: "878736"
+      educacion: "878772"
+      otros: "878817"
+
+  esperanza_son:
+    idEstructura: "1120017000600190"
+    indices:
+      indice_general: "878828"
+      alimentos: "878829"
+      ropa: "878984"
+      vivienda: "879036"
+      muebles: "879061"
+      salud: "879116"
+      transporte: "879166"
+      educacion: "879202"
+      otros: "879247"
+
+  fresnillo_zac:
+    idEstructura: "1120017000600200"
+    indices:
+      indice_general: "879258"
+      alimentos: "879259"
+      ropa: "879414"
+      vivienda: "879466"
+      muebles: "879491"
+      salud: "879546"
+      transporte: "879596"
+      educacion: "879632"
+      otros: "879677"
+
+  guadalajara_jal:
+    idEstructura: "1120017000600210"
+    indices:
+      indice_general: "879688"
+      alimentos: "879689"
+      ropa: "879844"
+      vivienda: "879896"
+      muebles: "879921"
+      salud: "879976"
+      transporte: "880026"
+      educacion: "880062"
+      otros: "880107"
+
+  hermosillo_son:
+    idEstructura: "1120017000600220"
+    indices:
+      indice_general: "880224"
+      alimentos: "880225"
+      ropa: "880380"
+      vivienda: "880432"
+      muebles: "880457"
+      salud: "880512"
+      transporte: "880562"
+      educacion: "880598"
+      otros: "880643"
+
+  huatabampo_son:
+    idEstructura: "1120017000600230"
+    indices:
+      indice_general: "880654"
+      alimentos: "880655"
+      ropa: "880810"
+      vivienda: "880862"
+      muebles: "880887"
+      salud: "880942"
+      transporte: "880992"
+      educacion: "881028"
+      otros: "881073"
+
+  iguala_gro:
+    idEstructura: "1120017000600240"
+    indices:
+      indice_general: "881084"
+      alimentos: "881085"
+      ropa: "881240"
+      vivienda: "881292"
+      muebles: "881317"
+      salud: "881372"
+      transporte: "881422"
+      educacion: "881458"
+      otros: "881503"
+
+  izucar_de_matamoros_pue:
+    idEstructura: "1120017000600250"
+    indices:
+      indice_general: "881514"
+      alimentos: "881515"
+      ropa: "881670"
+      vivienda: "881722"
+      muebles: "881747"
+      salud: "881802"
+      transporte: "881852"
+      educacion: "881888"
+      otros: "881933"
+
+  jacona_mich:
+    idEstructura: "1120017000600260"
+    indices:
+      indice_general: "881944"
+      alimentos: "881945"
+      ropa: "882100"
+      vivienda: "882152"
+      muebles: "882177"
+      salud: "882232"
+      transporte: "882282"
+      educacion: "882318"
+      otros: "882363"
+
+  la_paz_bcs:
+    idEstructura: "1120017000600270"
+    indices:
+      indice_general: "882374"
+      alimentos: "882375"
+      ropa: "882530"
+      vivienda: "882582"
+      muebles: "882607"
+      salud: "882662"
+      transporte: "882712"
+      educacion: "882748"
+      otros: "882793"
+
+  leon_gto:
+    idEstructura: "1120017000600280"
+    indices:
+      indice_general: "882804"
+      alimentos: "882805"
+      ropa: "882960"
+      vivienda: "883012"
+      muebles: "883037"
+      salud: "883092"
+      transporte: "883142"
+      educacion: "883178"
+      otros: "883223"
+
+  matamoros_tamps:
+    idEstructura: "1120017000600290"
+    indices:
+      indice_general: "883234"
+      alimentos: "883235"
+      ropa: "883390"
+      vivienda: "883442"
+      muebles: "883467"
+      salud: "883522"
+      transporte: "883572"
+      educacion: "883608"
+      otros: "883653"
+
+  merida_yuc:
+    idEstructura: "1120017000600300"
+    indices:
+      indice_general: "883664"
+      alimentos: "883665"
+      ropa: "883820"
+      vivienda: "883872"
+      muebles: "883897"
+      salud: "883952"
+      transporte: "884002"
+      educacion: "884038"
+      otros: "884083"
+
+  mexicali_bc:
+    idEstructura: "1120017000600310"
+    indices:
+      indice_general: "884094"
+      alimentos: "884095"
+      ropa: "884250"
+      vivienda: "884302"
+      muebles: "884327"
+      salud: "884382"
+      transporte: "884432"
+      educacion: "884468"
+      otros: "884513"
+
+  monclova_coah:
+    idEstructura: "1120017000600320"
+    indices:
+      indice_general: "884524"
+      alimentos: "884525"
+      ropa: "884680"
+      vivienda: "884732"
+      muebles: "884757"
+      salud: "884812"
+      transporte: "884862"
+      educacion: "884898"
+      otros: "884943"
+
+  monterrey_nl:
+    idEstructura: "1120017000600330"
+    indices:
+      indice_general: "884954"
+      alimentos: "884955"
+      ropa: "885110"
+      vivienda: "885162"
+      muebles: "885187"
+      salud: "885242"
+      transporte: "885292"
+      educacion: "885328"
+      otros: "885373"
+
+  morelia_mich:
+    idEstructura: "1120017000600340"
+    indices:
+      indice_general: "885490"
+      alimentos: "885491"
+      ropa: "885646"
+      vivienda: "885698"
+      muebles: "885723"
+      salud: "885778"
+      transporte: "885828"
+      educacion: "885864"
+      otros: "885909"
+
+  oaxaca_oax:
+    idEstructura: "1120017000600350"
+    indices:
+      indice_general: "885920"
+      alimentos: "885921"
+      ropa: "886076"
+      vivienda: "886128"
+      muebles: "886153"
+      salud: "886208"
+      transporte: "886258"
+      educacion: "886294"
+      otros: "886339"
+
+  pachuca_hgo:
+    idEstructura: "1120017000600360"
+    indices:
+      indice_general: "886350"
+      alimentos: "886351"
+      ropa: "886506"
+      vivienda: "886558"
+      muebles: "886583"
+      salud: "886638"
+      transporte: "886688"
+      educacion: "886724"
+      otros: "886769"
+
+  puebla_pue:
+    idEstructura: "1120017000600370"
+    indices:
+      indice_general: "886780"
+      alimentos: "886781"
+      ropa: "886936"
+      vivienda: "886988"
+      muebles: "887013"
+      salud: "887068"
+      transporte: "887118"
+      educacion: "887154"
+      otros: "887199"
+
+  queretaro_qro:
+    idEstructura: "1120017000600380"
+    indices:
+      indice_general: "887210"
+      alimentos: "887211"
+      ropa: "887366"
+      vivienda: "887418"
+      muebles: "887443"
+      salud: "887498"
+      transporte: "887548"
+      educacion: "887584"
+      otros: "887629"
+
+  saltillo_coah:
+    idEstructura: "1120017000600390"
+    indices:
+      indice_general: "887640"
+      alimentos: "887641"
+      ropa: "887796"
+      vivienda: "887848"
+      muebles: "887873"
+      salud: "887928"
+      transporte: "887978"
+      educacion: "888014"
+      otros: "888059"
+
+  san_andres_tuxtla_ver:
+    idEstructura: "1120017000600400"
+    indices:
+      indice_general: "888070"
+      alimentos: "888071"
+      ropa: "888226"
+      vivienda: "888278"
+      muebles: "888303"
+      salud: "888358"
+      transporte: "888408"
+      educacion: "888444"
+      otros: "888489"
+
+  san_luis_potosi_slp:
+    idEstructura: "1120017000600410"
+    indices:
+      indice_general: "888500"
+      alimentos: "888501"
+      ropa: "888656"
+      vivienda: "888708"
+      muebles: "888733"
+      salud: "888788"
+      transporte: "888838"
+      educacion: "888874"
+      otros: "888919"
+
+  tampico_tamps:
+    idEstructura: "1120017000600420"
+    indices:
+      indice_general: "888930"
+      alimentos: "888931"
+      ropa: "889086"
+      vivienda: "889138"
+      muebles: "889163"
+      salud: "889218"
+      transporte: "889268"
+      educacion: "889304"
+      otros: "889349"
+
+  tapachula_chis:
+    idEstructura: "1120017000600430"
+    indices:
+      indice_general: "889360"
+      alimentos: "889361"
+      ropa: "889516"
+      vivienda: "889568"
+      muebles: "889593"
+      salud: "889648"
+      transporte: "889698"
+      educacion: "889734"
+      otros: "889779"
+
+  tehuantepec_oax:
+    idEstructura: "1120017000600440"
+    indices:
+      indice_general: "889790"
+      alimentos: "889791"
+      ropa: "889946"
+      vivienda: "889998"
+      muebles: "890023"
+      salud: "890078"
+      transporte: "890128"
+      educacion: "890164"
+      otros: "890209"
+
+  tepatitlan_jal:
+    idEstructura: "1120017000600450"
+    indices:
+      indice_general: "890220"
+      alimentos: "890221"
+      ropa: "890376"
+      vivienda: "890428"
+      muebles: "890453"
+      salud: "890508"
+      transporte: "890558"
+      educacion: "890594"
+      otros: "890639"
+
+  tepic_nay:
+    idEstructura: "1120017000600460"
+    indices:
+      indice_general: "890650"
+      alimentos: "890651"
+      ropa: "890806"
+      vivienda: "890858"
+      muebles: "890883"
+      salud: "890938"
+      transporte: "890988"
+      educacion: "891024"
+      otros: "891069"
+
+  tijuana_bc:
+    idEstructura: "1120017000600470"
+    indices:
+      indice_general: "891080"
+      alimentos: "891081"
+      ropa: "891236"
+      vivienda: "891288"
+      muebles: "891313"
+      salud: "891368"
+      transporte: "891418"
+      educacion: "891454"
+      otros: "891499"
+
+  tlaxcala_tlax:
+    idEstructura: "1120017000600480"
+    indices:
+      indice_general: "891510"
+      alimentos: "891511"
+      ropa: "891666"
+      vivienda: "891718"
+      muebles: "891743"
+      salud: "891798"
+      transporte: "891848"
+      educacion: "891884"
+      otros: "891929"
+
+  toluca_edomex:
+    idEstructura: "1120017000600490"
+    indices:
+      indice_general: "891940"
+      alimentos: "891941"
+      ropa: "892096"
+      vivienda: "892148"
+      muebles: "892173"
+      salud: "892228"
+      transporte: "892278"
+      educacion: "892314"
+      otros: "892359"
+
+  torreon_coah:
+    idEstructura: "1120017000600500"
+    indices:
+      indice_general: "892370"
+      alimentos: "892371"
+      ropa: "892526"
+      vivienda: "892578"
+      muebles: "892603"
+      salud: "892658"
+      transporte: "892708"
+      educacion: "892744"
+      otros: "892789"
+
+  tulancingo_hgo:
+    idEstructura: "1120017000600510"
+    indices:
+      indice_general: "892800"
+      alimentos: "892801"
+      ropa: "892956"
+      vivienda: "893008"
+      muebles: "893033"
+      salud: "893088"
+      transporte: "893138"
+      educacion: "893174"
+      otros: "893219"
+
+  tuxtla_gutierrez_chis:
+    idEstructura: "1120017000600520"
+    indices:
+      indice_general: "893230"
+      alimentos: "893231"
+      ropa: "893386"
+      vivienda: "893438"
+      muebles: "893463"
+      salud: "893518"
+      transporte: "893568"
+      educacion: "893604"
+      otros: "893649"
+
+  veracruz_ver:
+    idEstructura: "1120017000600530"
+    indices:
+      indice_general: "893660"
+      alimentos: "893661"
+      ropa: "893816"
+      vivienda: "893868"
+      muebles: "893893"
+      salud: "893948"
+      transporte: "893998"
+      educacion: "894034"
+      otros: "894079"
+
+  villahermosa_tab:
+    idEstructura: "1120017000600540"
+    indices:
+      indice_general: "894090"
+      alimentos: "894091"
+      ropa: "894246"
+      vivienda: "894298"
+      muebles: "894323"
+      salud: "894378"
+      transporte: "894428"
+      educacion: "894464"
+      otros: "894509"
+
+  zacatecas_zac:
+    idEstructura: "1120017000600550"
+    indices:
+      indice_general: "894520"
+      alimentos: "894521"
+      ropa: "894676"
+      vivienda: "894728"
+      muebles: "894753"
+      salud: "894808"
+      transporte: "894858"
+      educacion: "894894"
+      otros: "894939"
