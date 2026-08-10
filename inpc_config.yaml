@@ -43,6 +43,14 @@ nacional:
     idEstructura: "112001700030"
     indices:
       indice_general: "865586"
+      alimentos: "865587"
+      ropa: "865758"
+      vivienda: "865815"
+      muebles: "865840"
+      salud: "865895"
+      transporte: "865951"
+      educacion: "865987"
+      otros: "866034"
 
 estados:
   aguascalientes:
