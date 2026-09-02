@@ -6,12 +6,12 @@ import requests
 
 URL = "https://www.inegi.org.mx/app/indicesdeprecios/servicios/ArbolAjaxInteraccion.asmx/EstructuraInicial"
 PATRON = re.compile(r"ShowMoreInformation\(\x27(\d+)\x27,\x27(\d+)\x27,\x27([^\x27]+)\x27")
-PREFIJO = "112001300040001"
+PREFIJO = "112001700030001"
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--output", default="catalogo_objeto_gasto.tsv")
 args = parser.parse_args()
-respuesta = requests.post(URL, json={"idEstructura": "112001300040", "esquemaBD": 0, "paramFuente": "pf", "notas": []}, timeout=60)
+respuesta = requests.post(URL, json={"idEstructura": "112001700030", "esquemaBD": 0, "paramFuente": "pf", "notas": []}, timeout=60)
 respuesta.raise_for_status()
 series = [(a, b, c) for a, b, c in PATRON.findall(respuesta.json()["d"]) if b.startswith(PREFIJO)]
 with open(args.output, "w", encoding="utf-8") as salida:

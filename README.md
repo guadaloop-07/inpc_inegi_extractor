@@ -6,7 +6,7 @@ por entidad federativa y por ciudad, y las consolida en un único archivo CSV.
 
 La configuración incluida contiene el índice general y ocho divisiones por
 objeto del gasto para el nivel nacional, las 32 entidades y las 55 ciudades
-del catálogo: 1,263 series en total.
+del catálogo: 1,246 series en total.
 
 ## Requisitos
 
