@@ -59,6 +59,9 @@ El programa construye primero un plan de series, lo valida y solo entonces inici
 python descargar_inpc.py
 python descargar_inpc.py --todo
 
+# Toda la desagregación, sólo nivel nacional
+python descargar_inpc.py --nivel nacional
+
 # Inspección sin peticiones a INEGI
 python descargar_inpc.py --listar-series --nivel nacional
 
