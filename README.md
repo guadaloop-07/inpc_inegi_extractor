@@ -30,9 +30,8 @@ Con los valores predeterminados:
 python descargar_inpc.py
 ```
 
-Esto conserva los XLS en `tmp/` y genera `data/inpc_integrado.csv`. Las
-descargas existentes se reutilizan para poder reanudar una ejecución
-interrumpida.
+Esto actualiza los XLS desde INEGI y genera `data/inpc_integrado.csv`, para que
+el CSV incluya los últimos periodos publicados.
 
 También se pueden indicar rutas distintas:
 
@@ -43,10 +42,11 @@ python descargar_inpc.py \
   --output data/inpc_integrado.csv
 ```
 
-Para volver a descargar archivos existentes:
+Para reutilizar los XLS ya descargados, por ejemplo al reanudar una ejecución
+interrumpida:
 
 ```bash
-python descargar_inpc.py --force
+python descargar_inpc.py --use-cache
 ```
 
 
@@ -78,15 +78,15 @@ Los filtros disponibles son `--nivel`, `--ubicacion`, `--indice`, `--clasificaci
 
 ### Descarga, reanudación y consolidación
 
-Los XLS se guardan en `<tmp-dir>/<nivel>/<ubicacion>_<indice>.xls`; el valor predeterminado de `--tmp-dir` es `tmp/`. Si un archivo válido ya existe, se reutiliza. Use `--force` para descargarlo de nuevo. El CSV se consolida solo con el plan seleccionado.
+Los XLS se guardan en `<tmp-dir>/<nivel>/<ubicacion>_<indice>.xls`; el valor predeterminado de `--tmp-dir` es `tmp/`. Por omisión se descargan de nuevo para que el CSV no quede desactualizado. Use `--use-cache` para reutilizar un archivo válido existente. El CSV se consolida solo con el plan seleccionado.
 
 ```bash
 # Una serie pequeña, con resultados fuera del repositorio
 python descargar_inpc.py --nivel nacional --indice pan_tortillas_cereales \
   --tmp-dir /tmp/inpc-prueba --output /tmp/inpc-prueba/inpc.csv
 
-# Forzar una nueva descarga
-python descargar_inpc.py --nivel nacional --indice pan_tortillas_cereales --force
+# Reanudar usando los XLS locales
+python descargar_inpc.py --nivel nacional --indice pan_tortillas_cereales --use-cache
 ```
 
 ## Catálogo y diccionario de datos
