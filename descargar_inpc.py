@@ -130,15 +130,15 @@ def construir_body(config: dict[str, Any], estructura: str, serie: str) -> dict[
     }
 
 
-def descargar_series(config: dict[str, Any], tmp_dir: Path, plan: list[SeriePlan], *, force: bool = False) -> tuple[int, int, int]:
-    """Descarga el plan, permitiendo estructuras distintas por serie."""
+def descargar_series(config: dict[str, Any], tmp_dir: Path, plan: list[SeriePlan], *, use_cache: bool = False) -> tuple[int, int, int]:
+    """Descarga el plan y reutiliza XLS previos únicamente bajo petición."""
     descargadas = reutilizadas = errores = 0
     with requests.Session() as session:
         session.headers.update({"Content-Type": "application/x-www-form-urlencoded", "User-Agent": "Mozilla/5.0"})
         for item in plan:
             destino = tmp_dir / item.nivel / f"{item.ubicacion}_{item.indice}.xls"
             destino.parent.mkdir(parents=True, exist_ok=True)
-            if destino.exists() and destino.stat().st_size > 0 and not force:
+            if destino.exists() and destino.stat().st_size > 0 and use_cache:
                 reutilizadas += 1
                 continue
             try:
@@ -188,7 +188,8 @@ def argumentos() -> argparse.Namespace:
     parser.add_argument("--config", type=Path, default=base / "inpc_config.yaml")
     parser.add_argument("--tmp-dir", type=Path, default=base / "tmp")
     parser.add_argument("--output", type=Path, default=base / "data" / "inpc_integrado.csv")
-    parser.add_argument("--force", action="store_true", help="vuelve a descargar los XLS existentes")
+    parser.add_argument("--use-cache", action="store_true", help="reutiliza los XLS existentes; útil para reanudar una ejecución")
+    parser.add_argument("--force", action="store_false", dest="use_cache", help=argparse.SUPPRESS)
     parser.add_argument("--nivel", action="append", default=[], help="nivel geográfico (repetible)")
     parser.add_argument("--ubicacion", action="append", default=[], help="ubicación (repetible)")
     parser.add_argument("--indice", action="append", default=[], help="índice lógico (repetible)")
@@ -237,7 +238,7 @@ def main() -> int:
             print("\t".join((item.nivel, item.ubicacion, item.indice, item.clasificacion, item.desagregacion, item.serie)))
         return 0
 
-    descargadas, reutilizadas, errores = descargar_series(config, args.tmp_dir, plan, force=args.force)
+    descargadas, reutilizadas, errores = descargar_series(config, args.tmp_dir, plan, use_cache=args.use_cache)
     registros = consolidar_archivos(args.tmp_dir, args.output, plan)
     LOG.info(
         "Finalizado: %s descargas, %s reutilizadas, %s errores, %s registros en %s",
